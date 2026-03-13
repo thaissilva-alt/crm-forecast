@@ -242,6 +242,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--text)}
         <option value="kit-com">Kit Comercial</option>
         <option value="kit-rur">Kit Rural / Agro</option>
         <option value="expansion">Ampliação de sistema</option>
+        <option value="support">Suporte / Pós-vendas</option>
         <option value="curious">Curioso</option>
         <option value="accidental">Clique sem querer</option>
         <option value="supplier">Fornecedor / Vendedor</option>
@@ -356,6 +357,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--text)}
             <option value="kit-com">Kit Comercial</option>
             <option value="kit-rur">Kit Rural / Agro</option>
             <option value="expansion">Ampliação de sistema</option>
+            <option value="support">Suporte / Pós-vendas</option>
             <option value="curious">Curioso</option>
             <option value="accidental">Clique sem querer</option>
             <option value="supplier">Fornecedor / Vendedor</option>
@@ -408,12 +410,12 @@ const statusBadge = {
 };
 const interestLabel = {
   'kit-res':'Kit Residencial', 'kit-com':'Kit Comercial', 'kit-rur':'Kit Rural / Agro',
-  expansion:'Ampliação de sistema', curious:'Curioso', accidental:'Clique sem querer',
+  expansion:'Ampliação de sistema', support:'Suporte / Pós-vendas', curious:'Curioso', accidental:'Clique sem querer',
   supplier:'Fornecedor / Vendedor', job:'Vaga de trabalho'
 };
 const interestBadge = {
   'kit-res':'badge-forecast', 'kit-com':'badge-closed-won', 'kit-rur':'badge-supplier',
-  expansion:'badge-expansion', curious:'badge-curious', accidental:'badge-accidental',
+  expansion:'badge-expansion', support:'badge-closed-won', curious:'badge-curious', accidental:'badge-accidental',
   supplier:'badge-teal', job:'badge-job'
 };
 
@@ -544,7 +546,7 @@ function renderCharts() {
   const dk=window.matchMedia('(prefers-color-scheme:dark)').matches;
   const tc=dk?'#a0a09c':'#6b6b68', gc=dk?'rgba(255,255,255,.08)':'rgba(0,0,0,.08)', bw=dk?'#1c1c1a':'#fff';
   const sc={forecast:0,negotiation:0,'closed-won':0,'closed-lost':0,followup:0};
-  const ic={'kit-res':0,'kit-com':0,'kit-rur':0,expansion:0,curious:0,accidental:0,supplier:0,job:0};
+  const ic={'kit-res':0,'kit-com':0,'kit-rur':0,expansion:0,support:0,curious:0,accidental:0,supplier:0,job:0};
   const ac={'18-24':0,'25-34':0,'35-44':0,'45-54':0,'55-64':0,'65+':0};
   const cc={};
   leads.forEach(function(l){
